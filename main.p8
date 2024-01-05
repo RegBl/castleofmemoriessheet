@@ -1,20 +1,22 @@
 -- main loop
 function _init()
-    comx = 1
-    comy = 64
-    comz = 1
+    comtitle = {
+        x=1,
+        y=64,
+        dir=1
+    }
 end
 
 function _update()
-    if comx==0
-    or comx==57 then
-        comz = comz * -1
+    if comtitle.x==0
+    or comtitle.x==57 then
+        comtitle.dir = comtitle.dir * -1
     end
 
-    comx = comx + comz
+    comtitle.x = comtitle.x + comtitle.dir
 end
 
 function _draw()
     cls(1)
-    print("castle of memories", comx, comy, 7)
+    print("castle of memories", comtitle.x, comtitle.y, 7)
 end
