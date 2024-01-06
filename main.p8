@@ -1,5 +1,29 @@
 -- main loop
 function _init()
+    character = {
+        name="",
+        pronouns="",
+        age=21,
+        attributes={
+            strength=10,
+            agility=10,
+            presence=10,
+            mind=10
+        },
+        inventory={},
+        weapons={},
+        armor=false,
+        shield=false,
+        hp={
+            current=10,
+            max=10
+        },
+        xp={
+            total=0,
+            spent=0,
+        }
+    }
+
     comtitle = {
         x=64,
         y=64,
